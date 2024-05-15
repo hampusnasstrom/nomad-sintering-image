@@ -1,2 +1,3 @@
 nomad-measurements
 nomad-material-processing
+git+https://github.com/hampusnasstrom/nomad-sintering.git
