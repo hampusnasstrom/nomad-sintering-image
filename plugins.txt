@@ -1,3 +1,0 @@
-nomad-measurements==0.0.5
-nomad-material-processing==0.0.10
-git+https://github.com/hampusnasstrom/nomad-sintering.git

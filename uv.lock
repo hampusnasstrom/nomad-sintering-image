@@ -3747,6 +3747,8 @@ dev = [
 plugins = [
     { name = "eelsdbconverter" },
     { name = "nomad-aitoolkit" },
+    { name = "nomad-material-processing" },
+    { name = "nomad-measurements" },
     { name = "nomad-normalizer-plugin-bandstructure" },
     { name = "nomad-normalizer-plugin-dos" },
     { name = "nomad-normalizer-plugin-simulation-workflow" },
@@ -3761,6 +3763,7 @@ plugins = [
     { name = "nomad-schema-plugin-run" },
     { name = "nomad-schema-plugin-simulation-workflow" },
     { name = "nomad-simulations" },
+    { name = "nomad-sintering" },
     { name = "perovskite-solar-cell-database" },
     { name = "pynxtools", extra = ["convert"] },
 ]
@@ -3771,6 +3774,8 @@ requires-dist = [
     { name = "nomad-aitoolkit", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8#b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8" },
     { name = "nomad-lab", extras = ["parsing", "infrastructure"], specifier = ">=1.3.4" },
     { name = "nomad-lab", extras = ["parsing", "infrastructure", "dev"], marker = "extra == 'dev'", specifier = ">=1.3.4" },
+    { name = "nomad-material-processing", marker = "extra == 'plugins'", specifier = "==0.0.10" },
+    { name = "nomad-measurements", marker = "extra == 'plugins'", specifier = "==0.0.5" },
     { name = "nomad-normalizer-plugin-bandstructure", marker = "extra == 'plugins'", specifier = ">=1.0" },
     { name = "nomad-normalizer-plugin-dos", marker = "extra == 'plugins'", specifier = ">=1.0" },
     { name = "nomad-normalizer-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0" },
@@ -3785,6 +3790,7 @@ requires-dist = [
     { name = "nomad-schema-plugin-run", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-schema-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-simulations", marker = "extra == 'plugins'", specifier = "==0.0.1" },
+    { name = "nomad-sintering", marker = "extra == 'plugins'", git = "https://github.com/hampusnasstrom/nomad-sintering.git" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=f394d21abafeb659729af0c94e5f90949fce01c1#f394d21abafeb659729af0c94e5f90949fce01c1" },
     { name = "pynxtools", extras = ["convert"], marker = "extra == 'plugins'", specifier = "==0.5.0" },
 ]
@@ -3923,6 +3929,31 @@ parsing = [
     { name = "nomad-openbis" },
     { name = "python-magic-bin", marker = "sys_platform == 'win32'" },
     { name = "rdkit" },
+]
+
+[[package]]
+name = "nomad-material-processing"
+version = "0.0.10"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "nomad-lab" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ab/db/34f7d1db2936390b0ef9b5b6cccbc3c6f342ab18d00e0883c80db936ded3/nomad_material_processing-0.0.10.tar.gz", hash = "sha256:794e6917302e06c48b60715a701c3ebf9ee4792935c2ae9e13e419259a8a2208", size = 29718 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2f/e8/c1967c99489164a71ba7e7660e6bdd2a6900a35cc496fc0831d0f707d3ec/nomad_material_processing-0.0.10-py3-none-any.whl", hash = "sha256:6907404820455ae83739ec7a6560d958e6b8e0703ab5551bac3909e2a09c19f4", size = 36675 },
+]
+
+[[package]]
+name = "nomad-measurements"
+version = "0.0.5"
+source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
+dependencies = [
+    { name = "nomad-lab" },
+    { name = "xmltodict" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0f/8c/4e8026674f61d4e0962df154bb703ee526881b4018f9e96aa98a23bde8ba/nomad-measurements-0.0.5.tar.gz", hash = "sha256:38b8b2f8eb290d3027e3be5d046e92dd09d96f2ddc9f4c6fd4e44e911349d1d7", size = 2151422 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8f/6a/23c93167882251d2ddbe38942873380d43b567334dc5461223db3f1dd1d4/nomad_measurements-0.0.5-py3-none-any.whl", hash = "sha256:722e8259fccb56c96b2ad9828a8154ca0c51ce14efe26617cc1875979c5e9de1", size = 33713 },
 ]
 
 [[package]]
@@ -4155,6 +4186,14 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/54/95/d61978fa03a9e2f4bdbe1c3e9290965e2dfd05a145235eee837a2decbba4/nomad_simulations-0.0.1.tar.gz", hash = "sha256:83131b7697722c20c712a1ad32e5c0f9b57ae8cba73aa50bac6d55d3a2562164", size = 577188 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/86/ee/6c01e4f2552596d0546b1034b33c6bcc0176e2896dafb39147e9737e2b24/nomad_simulations-0.0.1-py3-none-any.whl", hash = "sha256:f8dcfbe78921d75a0d6c24ffaf214f8a6f0fb0ec0ba37a1206f267467462076a", size = 84261 },
+]
+
+[[package]]
+name = "nomad-sintering"
+version = "0.1.0"
+source = { git = "https://github.com/hampusnasstrom/nomad-sintering.git#e417526e7c7783992f3a375fae511b790e7b88a0" }
+dependencies = [
+    { name = "nomad-lab" },
 ]
 
 [[package]]
