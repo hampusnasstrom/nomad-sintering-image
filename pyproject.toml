@@ -61,7 +61,7 @@ constraint-dependencies = ["hyperspy>=1.7.6"]
 prerelease = "disallow"
 
 [tool.uv.sources]
-nomad-sintering = { git = "https://github.com/hampusnasstrom/nomad-sintering.git" }
+nomad-sintering = { git = "https://github.com/hampusnasstrom/nomad-sintering.git", rev = "v1.0.6" }
 
 [tool.setuptools.packages.find]
 exclude = ["gui*", "docs*", "config*"]
