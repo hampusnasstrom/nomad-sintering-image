@@ -43,16 +43,16 @@ Below are instructions for how to deploy this NOMAD Oasis distribution
 2. Clone the repository or download the repository as a zip file.
 
     ```sh
-    git clone https://github.com/FAIRmat-NFDI/nomad-distro-template.git
-    cd nomad-distro-template
+    git clone https://github.com/hampusnasstrom/nomad-sintering-image.git
+    cd nomad-sintering-image
     ```
 
     or
 
     ```sh
-    curl-L -o nomad-distro-template.zip "https://github.com/FAIRmat-NFDI/nomad-distro-template/archive/main.zip"
-    unzip nomad-distro-template.zip
-    cd nomad-distro-template
+    curl-L -o nomad-sintering-image.zip "https://github.com/hampusnasstrom/nomad-sintering-image/archive/main.zip"
+    unzip nomad-sintering-image.zip
+    cd nomad-sintering-image
     ```
 
 3. _On Linux only,_ recursively change the owner of the `.volumes` directory to the nomad user (1000)
@@ -179,7 +179,7 @@ This image has been added to the [`configs/nomad.yaml`](configs/nomad.yaml) duri
 The image is quite large and might cause a timeout the first time it is run. In order to avoid this you can pre pull the image with:
 
 ```
-docker pull ghcr.io/fairmat-nfdi/nomad-distro-template/jupyter:main
+docker pull ghcr.io/hampusnasstrom/nomad-sintering-image/jupyter:main
 ```
 
 If you want additional python packages to be available to all users in the jupyter hub you can add those to the jupyter table in the [`pyproject.toml`](pyproject.toml):
@@ -243,7 +243,7 @@ Ideally all workflows should be triggered automatically but you might need to ru
 
 ## FAQ/Trouble shooting
 
-_I get an_ `Error response from daemon: Head "https://ghcr.io/v2/FAIRmat-NFDI/nomad-distro-template/manifests/main": unauthorized`
+_I get an_ `Error response from daemon: Head "https://ghcr.io/v2/hampusnasstrom/nomad-sintering-image/manifests/main": unauthorized`
 _when trying to pull my docker image._
 
 Most likely you have not made the package public or provided a personal access token (PAT).
