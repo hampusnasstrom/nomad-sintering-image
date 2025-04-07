@@ -47,7 +47,7 @@ plugins = [
   "nomad-parser-plugins-workflow>=1.0",
   "nomad-parser-plugins-database>=1.0",
   "nomad-measurements==0.0.5",
-  "nomad-material-processing==0.0.10",
+  "nomad-material-processing==1.0.5",
   "nomad-sintering",
 ]
 jupyter = []
