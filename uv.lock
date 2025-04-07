@@ -3256,7 +3256,7 @@ source = { git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8
 name = "nomad-distribution"
 source = { editable = "." }
 dependencies = [
-    { name = "nomad-lab", extra = ["infrastructure", "parsing"] },
+    { name = "nomad-lab" },
     { name = "setuptools" },
 ]
 
@@ -3292,8 +3292,8 @@ plugins = [
 requires-dist = [
     { name = "eelsdbconverter", marker = "extra == 'plugins'", git = "https://github.com/nomad-coe/nomad-parser-eelsdb.git?rev=entry-point" },
     { name = "nomad-aitoolkit", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git?rev=b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8" },
+    { name = "nomad-lab", specifier = "==1.3.15" },
     { name = "nomad-lab", extras = ["dev", "infrastructure", "parsing"], marker = "extra == 'dev'", specifier = ">=1.3.4" },
-    { name = "nomad-lab", extras = ["infrastructure", "parsing"], specifier = ">=1.3.4" },
     { name = "nomad-material-processing", marker = "extra == 'plugins'", specifier = "==0.0.10" },
     { name = "nomad-measurements", marker = "extra == 'plugins'", specifier = "==0.0.5" },
     { name = "nomad-normalizer-plugin-bandstructure", marker = "extra == 'plugins'", specifier = ">=1.0" },
@@ -3313,9 +3313,9 @@ requires-dist = [
     { name = "nomad-sintering", marker = "extra == 'plugins'", git = "https://github.com/hampusnasstrom/nomad-sintering.git" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=v0.1.1" },
     { name = "pynxtools", extras = ["convert"], marker = "extra == 'plugins'", specifier = "==0.10.0" },
-    { name = "setuptools" },
+    { name = "setuptools", specifier = "==75.1.0" },
 ]
-provides-extras = ["plugins", "jupyter", "dev"]
+provides-extras = ["dev", "jupyter", "plugins"]
 
 [[package]]
 name = "nomad-dos-fingerprints"
@@ -3518,14 +3518,14 @@ wheels = [
 
 [[package]]
 name = "nomad-normalizer-plugin-soap"
-version = "1.0"
+version = "1.0.1"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "nomad-lab" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ad/3e/8f314eb49a2817a63bccaa60f56ed52cf9d53c61d67673e90be1fdda0f9f/nomad_normalizer_plugin_soap-1.0.tar.gz", hash = "sha256:8f426773ed96d63dd2b5f0d4e15971266de4175859ee27400e8cd14d4fb724fb", size = 8059 }
+sdist = { url = "https://files.pythonhosted.org/packages/55/23/b2a69d31a58f5cf265cb3268c4389db76e900ea423033ccd99b54bcf89ea/nomad_normalizer_plugin_soap-1.0.1.tar.gz", hash = "sha256:d65c8fb281f20130461fa9f77f00d163e5bad215e753311da6531d8b9c3f4712", size = 228583 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f2/64/f2e3d16193e39b303d47c029d594f7ee20fafc2571157406641f47d715a7/nomad_normalizer_plugin_soap-1.0-py3-none-any.whl", hash = "sha256:2e861da6b2c425725f29ef1d681f81ba3ac6d1187009b64d870c8f39d94167c7", size = 8796 },
+    { url = "https://files.pythonhosted.org/packages/25/30/0f14ccac20a0113eab2256506dbae7af36085168d89f3fcb0fb49b3968e4/nomad_normalizer_plugin_soap-1.0.1-py3-none-any.whl", hash = "sha256:756e437d8a1ae95e9634f1aecc861af88a26681ab50df066e214194f6e890b0e", size = 9167 },
 ]
 
 [[package]]
