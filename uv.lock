@@ -3310,7 +3310,7 @@ requires-dist = [
     { name = "nomad-schema-plugin-run", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-schema-plugin-simulation-workflow", marker = "extra == 'plugins'", specifier = ">=1.0.1" },
     { name = "nomad-simulations", marker = "extra == 'plugins'", specifier = "==0.3.2" },
-    { name = "nomad-sintering", marker = "extra == 'plugins'", git = "https://github.com/hampusnasstrom/nomad-sintering.git?rev=v1.0.6" },
+    { name = "nomad-sintering", marker = "extra == 'plugins'", git = "https://github.com/hampusnasstrom/nomad-sintering.git?rev=v1.0.11" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=v0.1.1" },
     { name = "pynxtools", extras = ["convert"], marker = "extra == 'plugins'", specifier = "==0.10.0" },
     { name = "setuptools" },
@@ -3699,7 +3699,7 @@ wheels = [
 [[package]]
 name = "nomad-sintering"
 version = "0.1.0"
-source = { git = "https://github.com/hampusnasstrom/nomad-sintering.git?rev=v1.0.6#e417526e7c7783992f3a375fae511b790e7b88a0" }
+source = { git = "https://github.com/hampusnasstrom/nomad-sintering.git?rev=v1.0.11#cd27788790400698c1e8a2d46d30eb8dc68676c1" }
 dependencies = [
     { name = "nomad-lab" },
 ]
