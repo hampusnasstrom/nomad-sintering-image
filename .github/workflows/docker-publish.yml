@@ -17,15 +17,7 @@ env:
   PYTHON_VERSION: 3.12
   # If you want to skip the tests for some plugins, add them to the list below
   PLUGIN_TESTS_PLUGINS_TO_SKIP: |
-    workflowparsers
-    nomad_porous_materials
-    simulationworkflowschema
-    databaseparsers
-    soapnormalizer
-    eelsdbparser
-    atomisticparsers
-    nomad_aitoolkit
-    pynxtools_igor
+    nomad_material_processing
 
 permissions:
   contents: write
