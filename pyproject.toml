@@ -32,7 +32,9 @@ plugins = [
   "nomad-material-processing==1.0.5",
   "nomad-sintering",
 ]
-jupyter = []
+jupyter = [
+  "voila"
+]
 dev = ["nomad-lab[parsing, infrastructure, dev]>=1.3.4"]
 
 [tool.uv]
